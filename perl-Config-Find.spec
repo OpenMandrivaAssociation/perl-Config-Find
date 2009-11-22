@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Find configuration files
 License:    GPL+ or Artistic
@@ -16,6 +16,8 @@ BuildRequires: perl(File::Spec)
 BuildRequires: perl(File::Which)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
+%define _requires_exceptions perl\(Win32
 
 %description
 Every OS has different rules for configuration files placement, this module
