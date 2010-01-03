@@ -1,6 +1,8 @@
 %define upstream_name    Config-Find
 %define upstream_version 0.26
 
+%define _requires_exceptions perl(Win32)
+
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 2
@@ -16,8 +18,6 @@ BuildRequires: perl(File::Spec)
 BuildRequires: perl(File::Which)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
-
-%define _requires_exceptions perl\(Win32
 
 %description
 Every OS has different rules for configuration files placement, this module
