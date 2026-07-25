@@ -1,5 +1,5 @@
 %define upstream_name    Config-Find
-%define upstream_version 0.26
+%define upstream_version 0.31
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Win32\\)'
@@ -8,14 +8,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Find configuration files
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Config-Find
+Source0:	https://cpan.metacpan.org/authors/id/S/SA/SALVA/Config-Find-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
